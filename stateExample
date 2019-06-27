@@ -1,0 +1,31 @@
+import React, { Component } from 'react'
+
+class Example extends Component {
+
+    constructor(){
+        super()
+        this.state={
+            text : 'Hiiii...'
+        }
+    }
+
+    changetxt(){
+        this.setState({
+            text : 'Hello...'
+        })
+    }
+
+    render(){
+        return(
+            <div>
+            <h1>State Example</h1>
+            <h2>{this.state.text}</h2>
+            <button onClick ={() => this.changetxt()}>Click Here</button>
+            </div>
+        );
+    }
+
+}
+
+
+export default Example
