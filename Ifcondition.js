@@ -18,17 +18,6 @@ class Demo extends Component {
     }
 
     render() {
-        function NameList(props){
-        const name = ["Rita","Neha","Linda"];
-        const listItems = name.map((names)=>
-        <li key = {name.toString()}>
-            {name}
-        </li>
-        );
-        return (
-            <ul>{listItems}</ul>
-        );
-        }
 
         function UserMessage(props){
             return <h1>Loggedin Successfully</h1>;
