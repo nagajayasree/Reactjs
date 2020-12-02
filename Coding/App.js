@@ -15,6 +15,18 @@ function App() {
       <Result marks="550" />
       <Rating score="25" />
       <Tickets age="15" session="afternoon" />
+    <Users
+        users={[
+          { id: 1, name: "Abc", age: 38 },
+          { id: 2, name: "Hij", age: 42 },
+          { id: 3, name: "Xyz", age: 25 },
+        ]}
+      />
+      <PersonDetails
+        persons={({ Id: 467, Name: "Sam" }, { name: "dddds", age: 23 })}
+      />
+      <Text />
+      <DisplayMessage name="Nick" />
     </div>
   );
 }
