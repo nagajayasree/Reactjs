@@ -21,12 +21,27 @@ class ApiCalls extends Component {
     this.setState({ posts });
     console.log(posts);
   }
+  
+  handleAdd = async () => {
+    const obj = { title: "a", body: "b" };
+    const { data: post } = await axios.post(
+      "https://jsonplaceholder.typicode.com/posts",
+      obj
+    );
+    const posts = [post, ...this.state.posts];
+    this.setState({ posts });
+    console.log(post);
+  };
+
 
   render() {
     return (
       <>
         <p>Api Calls</p>
-        {this.state.data}
+        <button onClick={this.handleAdd}>Add</button>
+        {this.state.posts.map((post) => (
+          <p>{post.title}</p>
+        ))}
       </>
     );
   }
